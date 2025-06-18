@@ -1,16 +1,5 @@
 #!/bin/bash
 
-# =============================================================
-# venvctl config directory override
-#
-# By default, venvctl stores its internal state (venvs.db) under:
-#   $HOME/.config/venvctl/
-#
-# To allow safe testing and sandboxing, this can be overridden by setting:
-#   export VENVCTL_CONFIG_DIR=/path/to/custom/dir
-#
-# This makes testing fully isolated and avoids polluting the real system config.
-# =============================================================
 VENVCTL_CONFIG_DIR="${VENVCTL_CONFIG_DIR:-$HOME/.config/venvctl}"
 VENVCTL_DB="$VENVCTL_CONFIG_DIR/venvs.db"
 
